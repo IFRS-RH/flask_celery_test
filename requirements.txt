@@ -1,1 +1,14 @@
+APScheduler==3.10.4
 celery>=5.3
+Flask>=2.2.5
+Flask-APScheduler>=1.12.4
+Flask-Login==0.6.3
+Flask-Migrate==4.0.4
+Flask-Script==2.0.6
+Flask-Session==0.5.0
+Flask-SQLAlchemy==3.0.4
+kombu==5.3.0b3
+Jinja2==3.1.2
+mysql-connector-python>=8.0.33
+SQLAlchemy==2.0.16
+Werkzeug>=2.2.3
