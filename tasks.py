@@ -1,3 +1,5 @@
+import os
+
 from celery import Celery
 import smtplib
 from email.mime.text import MIMEText
@@ -5,8 +7,8 @@ from email.mime.multipart import MIMEMultipart
 
 
 appCelery = Celery(
-    broker='rediss://red-clfl10vjc5ks73e83se0:aPgdk9wsk1HtjnAj00YVqENSKZ4PC5q8@oregon-redis.render.com:6379',
-    result_backend='rediss://red-clfl10vjc5ks73e83se0:aPgdk9wsk1HtjnAj00YVqENSKZ4PC5q8@oregon-redis.render.com:6379'
+    broker=os.environ.get("REDIS_URL"),
+    result_backend=os.environ.get("REDIS_URL")
 )
 
 def login_server(server):
